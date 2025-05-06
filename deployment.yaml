@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tedelin
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: tedelin
+  template:
+    metadata:
+      labels:
+        app: tedelin
+    spec:
+      containers:
+        - image: wil42/playground:v1
+          name: tedelin
+          ports:
+            - containerPort: 80
