@@ -4,7 +4,6 @@ metadata:
   name: tedelin
 spec:
   replicas: 1
-  revisionHistoryLimit: 3
   selector:
     matchLabels:
       app: tedelin
@@ -17,4 +16,4 @@ spec:
         - image: wil42/playground:v2
           name: tedelin
           ports:
-            - containerPort: 80
+            - containerPort: 8888
