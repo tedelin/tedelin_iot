@@ -3,10 +3,7 @@ kind: Service
 metadata:
   name: tedelin
 spec:
-  type: LoadBalancer
+  ports:
+    - port: 8888
   selector:
     app: tedelin
-  ports:
-    - port: 80      
-      targetPort: 8888
-      protocol: TCP
