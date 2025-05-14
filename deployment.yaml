@@ -13,7 +13,7 @@ spec:
         app: tedelin
     spec:
       containers:
-        - image: wil42/playground:v1
-          name: tedelin
+        - name: tedelin
+          image: wil42/playground:v1
           ports:
             - containerPort: 8888
