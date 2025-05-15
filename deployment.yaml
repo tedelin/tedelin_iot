@@ -1,19 +1,18 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tedelin
+  name: wil-playground
 spec:
-  replicas: 1
   selector:
     matchLabels:
-      app: tedelin
+      app: wil-playground
+  replicas: 1
   template:
     metadata:
       labels:
-        app: tedelin
+        app: wil-playground
     spec:
       containers:
-        - name: tedelin
-          image: wil42/playground:v1
-          ports:
-            - containerPort: 8888
+        - name: wil-playground
+          image: wil42/playground:v2
